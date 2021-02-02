@@ -17,7 +17,7 @@ iptables -A INPUT -p tcp --dport 53 -j ACCEPT
 iptables -A INPUT -p udp --dport 53 -j ACCEPT
 
 # Allows DHCP to work
-#iptables -A INPUT -p udp --dport 67 -j ACCEPT
+iptables -A INPUT -p udp --dport 67 -j ACCEPT
 
 # Allows HTTP/HTTPS traffic
 iptables -A INPUT -p tcp -m multiport --sports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT 
